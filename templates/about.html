@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>ASDInsight</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/static/images/10 (2).png" alt="ASDInsight" />
+      </div>
+      <ul>
+
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('approach') }}">Approach</a></li>
+        <li><a href="{{ url_for('solution') }}">Solution</a></li>
+        <li><a href="{{ url_for('recommendation') }}">Recommendations</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about-section"> <!-- Initially hidden -->
+    <div class="head">
+      <h2 class="about-head">What is <i>Autism?</i></h2>
+    </div>
+    <div class="about-para">
+      <p>
+        Autism is a developmental disorder with symptoms that appear within the first three years of life. Its formal
+        diagnostic name is autism spectrum disorder. The word “spectrum” indicates that autism appears in different
+        forms with varying levels of severity. That means that each individual with autism experiences their own unique
+        strengths, symptoms, and challenges.
+
+        Understanding more about ASD can help you better understand the individuals who are living with it.
+      </p>
+      <img src="/static/images/autism-page-img-1.png" alt="Autism Spectrum Disorder" class="asd-image">
+      <h2>How autism spectrum disorders are described?</h2>
+      <p>
+        Psychiatrists and other clinicians rely on the fifth edition of the Diagnostic and Statistical Manual of Mental
+        Disorders (DSM-5) to define autism and its symptoms. The DSM-5 definition recognizes two main symptom areas:
+
+        Deficits in social communication and interaction
+        Restricted, repetitive behaviors, interests, or activities
+        These symptoms appear early in a child’s development—although diagnosis may occur later. Autism is diagnosed
+        when symptoms cause developmental challenges that are not better explained by other conditions.
+
+        The definition of autism has been refined over the years. Between 1995 and 2011, the DSM-IV grouped Asperger’s
+        Syndrome and Pervasive Developmental Disorder Not Otherwise Specified (PDD-NOS) with autism. Asperger’s syndrome
+        was an autism spectrum disorder marked by strong verbal language skills and, often, high intellectual ability.
+        PDD-NOS was a more general diagnosis for people who did not fit clearly into the other two categories.
+
+        However, the DSM-5 no longer recognizes Asperger’s syndrome or PDD-NOS as separate diagnoses. Individuals who
+        would previously have received either of these diagnoses may now receive a diagnosis of autism spectrum disorder
+        instead.
+      </p>
+      <h2>
+        Autism presentations and behaviors
+      </h2>
+      <p>
+        Individuals with autism may present a range of symptoms, such as:
+
+        Reduced eye contact
+        Differences in body language
+        Lack of facial expressions
+        Not engaging in imaginative play
+        Repeating gestures or sounds
+        Closely focused interests
+        Indifference to temperature extremes
+        These are just a few examples of the symptoms an individual with autism may experience. Any individual could
+        have some, all, or none of these symptoms. Keep in mind that having these symptoms does not necessarily mean a
+        person has autism. Only a qualified medical professional can diagnose autism spectrum disorder.
+
+        Most importantly, an individual with autism is first and foremost an individual. Learning about the symptoms can
+        help you start to understand the behaviors and challenges related to autism, but that’s not the same as getting
+        to know the individual. Each person with autism has their own strengths, likes, dislikes, interests, challenges,
+        and skills, just like you do.
+      </p>
+
+      <h2>Types of <i>Autism</i></h2>
+
+
+      <p>
+        Autism Spectrum Disorder (ASD) encompasses a wide range of conditions, categorized based on specific traits,
+        challenges, and needs. Here are the main types of autism:
+      </p>
+      <h4>1. Autism in Children</h4>
+      <p>
+        This type often presents early, with symptoms like delayed speech, repetitive behaviors, difficulty in social
+        interactions, lack of eye contact, resistance to change, hyperfocus on specific objects or topics, and
+        sensitivity to sensory stimuli (such as loud noises or bright lights). Early detection and intervention are
+        crucial to improving developmental outcomes.
+      </p>
+
+      <h4>2. Autism in Teens</h4>
+      <p>
+        Teens with autism may face challenges in socializing and adapting to change, alongside heightened sensory
+        sensitivities. Common symptoms include difficulty understanding social cues, trouble making and maintaining
+        friendships, anxiety in social situations, rigid routines, emotional outbursts, and hypersensitivity to sounds,
+        textures, or lights. They often excel in specific areas of interest but may need support to manage transitions
+        to adulthood.
+      </p>
+
+      <h4>3. Autism in Adults</h4>
+      <p>
+        Adults with autism can lead fulfilling lives but might face challenges in employment, relationships, and
+        communication. Symptoms often include difficulty with small talk, a preference for routines, social anxiety,
+        trouble interpreting sarcasm or indirect communication, intense focus on specific interests, and struggles with
+        time management. Many develop strong coping mechanisms and benefit from tailored support and advocacy.
+      </p>
+
+      <h4>4. Autism in Pregnant Women</h4>
+      <p>
+        Though rare, research into autism during pregnancy focuses on how neurodiverse women experience pregnancy.
+        Symptoms might include heightened sensory issues (increased sensitivity to sounds, smells, or textures),
+        difficulty adjusting to physical and emotional changes, challenges in communicating needs to healthcare
+        providers, and a strong preference for structured environments. It highlights the importance of understanding
+        and addressing their unique health needs.
+      </p>
+      <h4>5. High-Functioning Autism</h4>
+      <p>
+        Often associated with Asperger’s syndrome, individuals with high-functioning autism exhibit above-average
+        intellectual abilities but may struggle with social interactions and nonverbal communication. Symptoms include
+        literal thinking, difficulty interpreting body language or facial expressions, inflexible routines, strong but
+        narrow interests, sensory sensitivities, and difficulty handling unexpected changes.
+      </p>
+
+    </div>
+
+
+  </section>
+  <section class="head-about">
+    <h1><i>About</i> ASDInsight</h1>
+    <p>
+      Our platform is designed to drive precision in early detection of ASD.
+      <br>We quickly onnect you to reliable tools and <br> personalized solutions that perform no matter the challenge.
+    </p>
+  </section>
+
+
+  <div class="photo-collage">
+    <div class="small-photo"><img src="/static/images/image-2.jpg" alt="Photo 1"></div>
+    <div class="large-photo"><img src="/static/images/image-1.jpg" alt="Photo 2"></div>
+    <div class="small-photo"><img src="/static/images/14.webp" alt="Photo 3"></div>
+    <div class="small-photo"><img src="/static/images/16.webp" alt="Photo 4"></div>
+    <div class="small-photo"><img src="/static/images/12.jpg" alt="Photo 5"></div>
+  </div>
+
+  <section class="head-about">
+    <h1><i>Why</i> "ASDInsight"</h1>
+    <p>
+      The name <b>ASDInsight</b> reflects our mission to bring clarity
+      <br>and understanding to Autism Spectrum Disorder (ASD). The name
+      <br>symbolizes awareness and support, offering tools and resources to
+      <br>empower individuals and families. We aim to inspire hope and meaningful
+      <br>change, no matter where you are on your journey.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ASD Insight. All Rights Reserved.</p>
+  </footer>

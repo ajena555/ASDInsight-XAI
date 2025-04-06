@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>ASDInsight</title>
+</head>
+<style>
+  header {
+    position: relative;
+    background: url('/static/images/23.png') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+  }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/static/images/10 (2).png" alt="ASDInsight" />
+      </div>
+      <ul>
+
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('approach') }}">Approach</a></li>
+        <li><a href="{{ url_for('solution') }}">Solution</a></li>
+        <li><a href="{{ url_for('recommendation') }}">Recommendations</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+
+  <div class="hero">
+    <h1 id="hero-title"></h1>
+    <p id="hero-description"><b>Everyone deserves tailored care.<br>
+        ASDInsight provides advanced solutions to match individuals<br>
+        with the right support, changing lives everywhere.</b>
+    </p>
+    <button class="btn btn-primary" onclick="window.location.href='{{ url_for('solution') }}';">Start Assessment</button>
+
+    <button class="btn btn-secondary"
+      onclick="document.getElementById('learn_more').scrollIntoView({ behavior: 'smooth' });">Learn More</button>
+
+  </div>
+
+  <section class="intro-section">
+    <div class="text-content" id="slideText">
+      <h1>Empowering Early Autism Detection For Every Family</h1>
+      <p>ASDInsight is a groundbreaking platform designed to provide early
+        autism detection and actionable guidance for parents and caregivers.
+        Leveraging machine learning and Explainable AI, we deliver personalized
+        insights to support your child's development—whether it’s behavior
+        analysis, expert recommendations, or interactive tools to guide you
+        every step of the way.
+      </p>
+      <button class="learn-more-btn"
+        onclick="document.getElementById('learn_more').scrollIntoView({behavior:'smooth'})">Learn More</button>
+    </div>
+    <div class="image-content">
+      <img src="https://cdn.pixabay.com/photo/2024/01/05/15/45/ai-generated-8489717_1280.png"
+        alt="People laughing in a natural setting">
+    </div>
+  </section>
+
+
+  <main>
+    <section class="content-section">
+      <h2>Our Mission</h2>
+      <div class="flex-container">
+        <div class="flex-box">
+          <img src="/static/images/3.jpeg" alt="Empower Families" class="icon">
+          <p>✔ Empower families with tools to detect early signs of ASD.</p>
+        </div>
+        <div class="flex-box">
+          <img src="/static/images/12.jpg" alt="Personalized Recommendations" class="icon">
+          <p>✔ Provide personalized, actionable recommendations for early intervention.</p>
+        </div>
+        <div class="flex-box">
+          <img src="/static/images/13.webp" alt="Technology" class="icon">
+          <p>✔ Leverage technology to bridge gaps in early autism diagnosis.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Why Early Detection Matters</h2>
+      <div class="flex-container">
+        <div class="flex-box">
+          <img src="/static/images/14.webp" alt="Critical Periods" class="icon">
+          <p>✔ Early diagnosis helps capitalize on critical developmental periods.</p>
+        </div>
+        <div class="flex-box">
+          <img src="/static/images/15.webp" alt="Timely Intervention" class="icon">
+          <p>✔ Timely intervention improves long-term outcomes for children with ASD.</p>
+        </div>
+        <div class="flex-box">
+          <img src="/static/images/16.webp" alt="Support Families" class="icon">
+          <p>✔ Provides families with the support and knowledge they need to navigate ASD.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Learn More -->
+    <section id="learn_more">
+      <h2>Learn More About ASD</h2>
+      <video controls width="700">
+        <source src="static/images/what-is-autism-quick-learner-1440-publer.io.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p id="learn">Watch this short video to understand the early signs of Autism Spectrum Disorder and the importance
+        of timely intervention.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 ASD Insight. All Rights Reserved.</p>
+  </footer>
+
+
+
+  <script>
+    const text = "Early Insights, Lifelong Impact";
+    const titleElement = document.getElementById("hero-title");
+
+    let index = 0;
+
+    function typeEffect() {
+      if (index < text.length) {
+        titleElement.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100); // Adjust typing speed here
+      }
+    }
+
+    // Start the typing effect after page load
+    window.onload = typeEffect;
+
+
+
+  </script>
+
+
+
+
+</body>
+
+</html>

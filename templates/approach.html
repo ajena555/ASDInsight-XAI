@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>ASDInsight</title>
+</head>
+<style>
+  header {
+    position: relative;
+    background: url('/static/images/16.webp') no-repeat center center/cover;
+    height: 100vh;
+    color: white;
+  }
+</style>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/static/images/10 (2).png" alt="ASDInsight" />
+    </div>
+        <ul>
+          
+          <li><a href="{{ url_for('index') }}">Home</a></li>
+          <li><a href="{{ url_for('about') }}">About</a></li>
+          <li><a href="{{ url_for('approach') }}">Approach</a></li>
+          <li><a href="{{ url_for('solution') }}">Solution</a></li>
+          <li><a href="{{ url_for('recommendation') }}">Recommendations</a></li>
+          
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Science-Driven Autism Insight<br>
+          With a Personal Touch</h1>
+        <p id="hero-paragraph">When it comes to your child’s development, 
+            uncertainty can be overwhelming. ASDInsight eliminates the guesswork 
+            by providing evidence-based predictions and recommendations, tailored 
+            to your child’s unique needs.
+        </p>
+        <button class="btn btn-primary" onclick="window.location.href='{{ url_for('solution') }}';">Start Assessment</button>
+
+        
+      </div>
+
+      <section class="ppp">
+        <h1>Better Care For a Brighter Future</h1>
+        <p>
+          Our approach combines cutting-edge technology with genuine compassion. 
+          With the complexities of autism detection and personalized guidance, 
+          getting accurate insights and actionable steps can feel overwhelming. 
+          At ASDInsight, we ensure every family receives the support they need. 
+          </p>
+        <div class="features">
+          <div class="feature">
+            <img src="/static/images/p-1.svg" alt="Precise Icon">
+            <h3>Accurate</h3>
+            <p>Powered by Explainable AI and expert-reviewed machine learning, ASDInsight delivers precise autism likelihood predictions. We help you understand the "why" behind the results, making them clear and actionable.  
+            </p>
+          </div>
+          <div class="feature">
+            <img src="/static/images/p-2.svg" alt="Personal Icon">
+            <h3>Personalized</h3>
+            <p>No two children are the same. Our tailored recommendations are designed to support your child’s unique journey, empowering families with actionable insights and practical steps to nurture their potential.  
+            </p>
+            
+          </div>
+          <div class="feature">
+            <img src="/static/images/p-3.svg" alt="Proven Icon">
+            <h3>Proven</h3>
+            <p>Our methodologies are backed by research and guided by data-driven models. With a foundation of scientific rigor, ASDInsight ensures safe, transparent, and reliable guidance for early autism detection.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="container">
+        <h1>Eliminating the guesswork with 
+          <br>comprehensive data</h1>
+        <p>
+          We use machine-learning models to analyze hundreds of thousands of data points. This data informs personalized recommendations, real-time provider feedback, and ongoing adjustments to care plans resulting in the right care for each individual.
+        </p>
+        <div class="content">
+          <div class="steps">
+            <div onclick="showImage(1)">
+              <div class="number">01</div>
+              <p>We collect a comprehensive set of data on each individual from reliable sources.</p>
+            </div>
+            <div onclick="showImage(2)">
+              <div class="number">02</div>
+              <p>We compare that person's data against hundreds of thousands of other data points.</p>
+            </div>
+            <div onclick="showImage(3)">
+              <div class="number">03</div>
+              <p>We use interpretable machine-learning models to match each person to the right care for them.</p>
+            </div>
+          </div>
+          <div class="illustration">
+          
+            <img id="dynamicImage" src="/static/images/an-1.svg" alt="Data Illustration">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 ASD Insight. All Rights Reserved.</p>
+</footer>
+  
+  <script>
+    function showImage(step) {
+      const image = document.getElementById('dynamicImage');
+      if (step === 1) {
+        image.src = "/static/images/an-1.svg"; // Replace with the actual path to the image
+        image.alt = 'Data Illustration for Step 1';
+      } else if (step === 2) {
+        image.src = "/static/images/an-2.svg"; // Replace with the actual path to the image
+        image.alt = 'Data Illustration for Step 2';
+      } else if (step === 3) {
+        image.src = '/static/images/an-3.webp'; // Replace with the actual path to the image
+        image.alt = 'Data Illustration for Step 3';
+      }
+    }
+  </script>
+
+
+    
+        
+      </body>
+    

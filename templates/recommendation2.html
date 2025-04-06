@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>ASDInsight</title>
+</head>
+
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/static/images/10 (2).png" alt="ASDInsight" />
+      </div>
+      <ul>
+
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('approach') }}">Approach</a></li>
+        <li><a href="{{ url_for('solution') }}">Solution</a></li>
+        <li><a href="{{ url_for('recommendation') }}">Recommendations</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section class="recommendation-section">
+    <h1>Recommended Treatments</h1>
+
+    <p>{{ recommendation_message }}</p>
+
+    {% if treatments %}
+    <div class="treatment-list">
+      <ul>
+        {% for treatment in treatments %}
+        <li>{{ treatment }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    <p> For more details on Autism and its treatments and personalized guidance, please check out our ASDINsight chatbot
+      below. Feel free to ask any questions you have!</p>
+
+  </section>
+
+  <!-- Embedded Chatbot Section -->
+
+  <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="kerpIw7Xt8TnWlhb2JopD";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
+</body>
+
+</html>

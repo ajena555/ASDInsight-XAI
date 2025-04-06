@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styles.css">
+  <title>ASDInsight</title>
+</head>
+
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="/static/images/10 (2).png" alt="ASDInsight" />
+    </div>
+        <ul>
+          
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            <li><a href="{{ url_for('about') }}">About</a></li>
+            <li><a href="{{ url_for('approach') }}">Approach</a></li>
+            <li><a href="{{ url_for('solution') }}">Solution</a></li>
+            <li><a href="{{ url_for('recommendation') }}">Recommendations</a></li>
+            
+        </ul>
+      </nav>
+    </header>
+    <section class="form2">
+        <h1>Predict ASD Risk</h1>
+        <form action="{{ url_for('solution') }}" method="POST">
+            <!-- Questions and Medical History Section -->
+            <label>Does your child avoid making eye contact when interacting with others?</label>
+            <select name="a1">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Does your child not respond when their name is called, even if there are no distractions?</label>
+            <select name="a2">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Does your child prefer playing alone rather than engaging with other children?</label>
+            <select name="a3">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label> Does your child engage in repetitive behaviors like hand flapping, rocking, or spinning objects?</label>
+            <select name="a4">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Does your child struggle to understand or use common gestures like pointing or waving?</label>
+            <select name="a5">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Does your child react strongly (or not at all) to loud sounds, bright lights, or certain textures?</label>
+            <select name="a6">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Does your child have delayed speech development or difficulty expressing their needs?</label>
+            <select name="a7">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Does your child insist on following the same routines and get upset with minor changes?</label>
+            <select name="a8">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Does your child have a strong attachment to specific objects and become very distressed if they are removed?</label>
+            <select name="a9">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Does your child struggle to recognize or respond to emotions in others?</label>
+            <select name="a10">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Rate the child’s difficulty with social interaction (1 = none, 10 = extreme)</label>
+            <input type="number" name="qchat" min="1" max="10" step="1" required>
+
+            
+
+            <label>Age of the child</label>
+            <input type="number" name="age" min="2" max="10" required>
+
+            <label>Sex</label>
+            <select name="sex">
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+            <label>History of Jaundice at Birth</label>
+            <select name="jaundice">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <label>Family Member with ASD</label>
+            <select name="family_asd">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+
+            <button type="submit">Predict</button>
+        </form>
+    </section>
+</body>
+</html>
